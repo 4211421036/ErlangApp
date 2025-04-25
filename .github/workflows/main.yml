@@ -1,0 +1,23 @@
+name: Build Erlang Project
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Build Erlang Project
+        uses: 4211421036/erlang-build-action@v1.0.0
+        with:
+          erlang-source: './'  # Path ke file atau direktori Erlang Anda
+          build-mode: 'build'     # 'build' untuk executable, 'debug' untuk debugging
+          output-dir: './build'   # Direktori output (akan dibuat otomatis)
+          erts-version: '25.0'    # Versi Erlang/OTP (opsional)
+          hex-packages: 'cowboy,jsx,lager'  # Tambahan Hex packages (opsional)
