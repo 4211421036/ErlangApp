@@ -20,4 +20,3 @@ jobs:
           build-mode: 'build'     # 'build' untuk executable, 'debug' untuk debugging
           output-dir: './build'   # Direktori output (akan dibuat otomatis)
           erts-version: '25.0'    # Versi Erlang/OTP (opsional)
-          hex-packages: 'cowboy,jsx,lager'  # Tambahan Hex packages (opsional)
