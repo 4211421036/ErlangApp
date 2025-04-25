@@ -20,3 +20,14 @@ jobs:
           build-mode: 'build'     # 'build' untuk executable, 'debug' untuk debugging
           output-dir: './build'   # Direktori output (akan dibuat otomatis)
           erts-version: '25.0'    # Versi Erlang/OTP (opsional)
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          if git commit -m "Build File Erlang"; then
+            git push
+          else
+            echo "No changes to commit."
+          fi
