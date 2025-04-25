@@ -1,3 +1,6 @@
+-module(solution).
+-export([num_music_playlists/3]).
+
 num_music_playlists(N, Goal, K) ->
     Mod = 1000000007,
     DP = init_dp(Goal, N),
