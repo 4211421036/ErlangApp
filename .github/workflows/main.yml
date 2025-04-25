@@ -17,7 +17,7 @@ jobs:
         uses: 4211421036/ErlangBuilder@v1.0.5
         with:
           erlang-source: './pm.erl'  # Path ke file atau direktori Erlang Anda punya
-          build-mode: 'build'     # 'build' untuk executable, 'debug' untuk debugging
+          build-mode: 'debug'     # 'build' untuk executable, 'debug' untuk debugging
           output-dir: './build'   # Direktori output (akan dibuat otomatis)
           erts-version: '25.0'    # Versi Erlang/OTP (opsional)
 
